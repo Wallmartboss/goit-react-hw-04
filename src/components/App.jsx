@@ -37,13 +37,6 @@ const App = () => {
      setItems([]);
     };
 
-  // const openLargeImage = (largeImage, alt) => {
-  //   console.log('openLargeImage called with:', { largeImage, alt });
-  //   setLargeImage(largeImage);
-  //   setAlt(alt);
-  //   openModal();
-  // };
-
  useEffect(() => {
     const getData = async () => {
       try {
@@ -75,13 +68,13 @@ const App = () => {
                             items={items}
                             openModal={openModal} />} 
       {totalPages > page && !isLoading && <LoadMoreButton setPage={setPage} />}
-      {/* {largeImage && ( */}
+      {largeImage && (
         <ImageModal
         largeImage={largeImage}
         alt={alt}
         isOpen={modalIsOpen}
         onRequestClose={closeModal} />
-      {/* )} */}
+       )}
       </div>
   );
 };

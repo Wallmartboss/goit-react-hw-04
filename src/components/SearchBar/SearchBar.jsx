@@ -24,7 +24,7 @@ const notify = () => toast('Please, fill keyword for searching...');
       value={query}  
       onChange={(e) => setLocalQuery(e.target.value)}
     />
-        <button type="submit" className={s.btn} onClick={() => setQuery(query), notify}>Search</button>
+        <button type="submit" className={s.btn} onClick={() => setQuery(query), notify} > Search</button>
         {!query && <Toaster />} 
      </form>
 </header>

@@ -3,9 +3,7 @@ import Modal from 'react-modal';
 
 const ImageModal = ({ largeImage, alt, isOpen, onRequestClose }) => {
         
-  console.log({ largeImage, alt });
-  console.log(isOpen);
-  Modal.setAppElement('#root');
+Modal.setAppElement('#root');
 
       
 
