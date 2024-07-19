@@ -9,7 +9,8 @@ const SearchBar = ({ setQuery }) => {
 const notify = () => toast('Please, fill keyword for searching...');
 
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
+    if (!event.target.querySelector("input").value) { notify(); return };
     setQuery(query);
      };
   
@@ -24,7 +25,7 @@ const notify = () => toast('Please, fill keyword for searching...');
       value={query}  
       onChange={(e) => setLocalQuery(e.target.value)}
     />
-        <button type="submit" className={s.btn} onClick={() => setQuery(query), notify} > Search</button>
+        <button type="submit" className={s.btn} > Search</button>
         {!query && <Toaster />} 
      </form>
 </header>

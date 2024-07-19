@@ -1,9 +1,9 @@
-import s from './LoadMoreButton.module.css'; 
+import s from './LoadMoreBtn.module.css'; 
 
-const LoadMoreButton = ({ setPage }) => {
+const LoadMoreBtn = ({ setPage }) => {
   
     return (
         <button className={s.btn} onClick={() => setPage(prev => prev + 1)}>Load more</button>
          );
 };
-export default LoadMoreButton;
+export default LoadMoreBtn;

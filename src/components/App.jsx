@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import {requestPictures} from "./Api/api-unsplash"
 import ImageGallery from './ImageGallery/ImageGallery';
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
-import LoadMoreButton from "./LoadMoreButton/LoadMoreButton";
+import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./ImageModal/ImageModal";
 
 const App = () => {
@@ -55,9 +55,6 @@ const App = () => {
    if (query) { getData() }
      }, [query, page]);
 
-  console.log(largeImage, alt);
-  console.log(modalIsOpen);
-  
   return (
     <div>
      
@@ -67,7 +64,7 @@ const App = () => {
       {query && !isError && <ImageGallery
                             items={items}
                             openModal={openModal} />} 
-      {totalPages > page && !isLoading && <LoadMoreButton setPage={setPage} />}
+      {totalPages > page && !isLoading && <LoadMoreBtn setPage={setPage} />}
       {largeImage && (
         <ImageModal
         largeImage={largeImage}

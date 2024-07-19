@@ -10,9 +10,8 @@ const ImageGallery = ({ items, openModal }) => {
     return (
         <ul className={s.set_images}>
             {items.map((item) => (
-                <li key={item.id} className={s.image}
-                onClick={() => openModal(item.urls.regular, item.alt_description)}>
-                    <ImageCard item={item} />
+                <li key={item.id} className={s.image}>
+                    <ImageCard item={item} openModal={openModal} />
                 </li>
              ))}
         </ul>
