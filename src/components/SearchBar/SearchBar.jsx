@@ -10,7 +10,7 @@ const notify = () => toast('Please, fill keyword for searching...');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!event.target.querySelector("input").value) { notify(); return };
+    if (!event.target.querySelector("input").value) { notify(); return }
     setQuery(query);
      };
   
